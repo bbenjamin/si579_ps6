@@ -1,5 +1,12 @@
 import React from "react";
+// Since WordEntry is in the same directory, you want
+// this to be `./WordEntry`, you're currently pointing to a second 'components' directory in 'components'
 import ShowRhymes from "./components/WordEntry";
+// 👆If you're importing a component, the "import  should
+// match the same name as the file you're getting it from.
+// It's possible to get around this, but it adds complexity.
+// In this case it is also confusing because you would have something
+// called 'ShowRhymes' that is actually 'WordEntry'
 import { useState, useEffect, useRef } from "react";
 
 const InputGroup = (props) => {
@@ -48,6 +55,10 @@ const InputGroup = (props) => {
                 type="button"
                 className="btn btn-primary"
                 // How do I pass the word input into the WordEntry function?
+                // Answer: make a state variable such as `wordInput`, and you don't
+                // even have to pass it in. It will automatically be available to ShowRhymes().
+                // Look at the add event form in the umich events app to see how we wire
+                // state to inputs.
                 onClick={ShowRhymes}>Show rhyming words
             </button>
 

@@ -1,5 +1,10 @@
+// Since InputGroup is in the same directory, you want
+// this to be `./InputGroup`, you're currently pointing to a second 'components' directory in 'components'
+// Same with WordEntry
 import InputGroup from "./components/InputGroup";
 import WordEntry from "./components/WordEntry";
+// You want to import useState from 'react';
+// See the events & todo list apps we did in class for reference.
 import {useState} from ".";
 
 const ShowRhymes = (props) => {

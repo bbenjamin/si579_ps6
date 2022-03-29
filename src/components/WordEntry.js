@@ -1,3 +1,5 @@
+// Reference what I mentioned in ShowRhymes and InputGroup on how
+// to fix your imports.
 import InputGroup from "./components/InputGroup";
 import {useState} from ".";
 
